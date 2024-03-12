@@ -1,5 +1,7 @@
+# Builder
 FROM ubuntu:22.04
 
+# Install dependencies
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt install -y \
 	git \
@@ -9,7 +11,7 @@ RUN apt update && apt install -y \
 	build-essential \
 	cmake
 
-# vSomeIP
+# Build vsomeip
 WORKDIR /root
 RUN git clone --branch 3.4.10 https://github.com/COVESA/vsomeip.git vsomeip \
 	&& mkdir -p vsomeip/build \
