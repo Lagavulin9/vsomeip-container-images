@@ -1,5 +1,5 @@
 # Develop Environment
-FROM lagavulin16/vsomeip-dev AS builder
+FROM lagavulin16/vsomeip:dev AS builder
 
 # Base Image
 FROM ubuntu:22.04 AS baseImage
